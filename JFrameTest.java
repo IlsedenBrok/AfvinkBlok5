@@ -29,7 +29,7 @@ public class JFrameTest extends JFrame implements ActionListener {
         JFrameTest frame;
         frame = new JFrameTest();
         frame.setTitle(TITEL);
-        frame.setSize(500, 600);
+        frame.setSize(490, 600);
         frame.createGUI();
         frame.setVisible(true);
     }
