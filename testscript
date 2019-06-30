@@ -8,6 +8,7 @@ Testen met eiwit sequentie:
 5.  de informatie staat nu in het tekstveld
 6.  klik op de "visualiseer" knop
 7.  de balk die is getekend geeft de hydrofobe/hydrofiele/neutrale aminozuren weer
+8.  klik op het kruisje
 
 
 Testen met niet eiwit sequentie:
@@ -15,5 +16,10 @@ Testen met niet eiwit sequentie:
 2.  klik op de "blader" knop
 3.  selecteer geeneiwit.txt
 4.  klik op de "open" knop
-5.  de informatie staat nu in het tekstveld, er staat dat er een niet aminozuur tussen staat
-6.  het script gaat niet verder
+5.  er komt een popup met de informatie dat er een niet aminozuur letter tussen staat
+6.  klik op ok of het kruisje
+7.  er staat nu extra informatie in het tekstveld
+8.  als de gebruiker alsnog de visualisatie wilt zien, worden niet aminozuur letters meegenomen als "neutraal"
+9.  klik op de "visualiseer" knop
+10.  de balk die is getekend geeft de hydrofobe/hydrofiele/neutrale aminozuren weer
+11.  klik op het kruisje
