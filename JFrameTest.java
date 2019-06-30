@@ -80,7 +80,8 @@ public class JFrameTest extends JFrame implements ActionListener {
                     if (new String(aminoarray).indexOf(aminoAcid[z]) != -1) {
                         infoArea.setText("Alle aminozuren zijn juist!   Dit is uw sequentie:  " + "\n" + line);
                     } else {
-                        infoArea.setText("Er staat een niet aminozuur letter in, controleer uw sequentie!");
+                        JOptionPane.showMessageDialog(null,"Er staat een niet aminozuur letter in uw sequentie!");
+                        infoArea.setText("Er staat een niet aminozuur letter in uw bestand, controleer uw sequentie!\n  Als u alsnog de hydrofobe/hydrofiele/neutrale aminozuren wilt zien,\n kan u alsnog op de visualiseer knop klikken.\n De niet aminozuur letter(s) worden gezien als neutraal.");
                     }
                 }
             }
@@ -113,22 +114,17 @@ public class JFrameTest extends JFrame implements ActionListener {
             int rectLength = 400;
             if (aminoAcid.length != 0) {
                 int aminoLength = rectLength / aminoAcid.length;
-                System.out.println(aminoLength);
                 for (int z = 0; z < aminoAcid.length; z++) {
                     if (new String(hydrofoobarray).indexOf(aminoAcid[z]) != -1) {
-                        int locatie = (20 + (aminoLength*z));
-                        System.out.println("HYDROFOOB   " + locatie);
+                        int locatie = (20 + (aminoLength * z));
                         visualPanel.setColor(Color.yellow);
                         visualPanel.fillRect(locatie, 20, aminoLength, 75);
-                        //visualPanel.fillRect(int x, int y, WIDTH, HEIGHT);
                     } else if (new String(hydrofielarray).indexOf(aminoAcid[z]) != -1) {
-                        int locatie = (20 + (aminoLength*z));
-                        System.out.println("HYDROFIEL   " + locatie);
+                        int locatie = (20 + (aminoLength * z));
                         visualPanel.setColor(Color.blue);
                         visualPanel.fillRect(locatie, 20, aminoLength, 75);
                     } else {
-                        int locatie = (20 + (aminoLength*z));
-                        System.out.println("NEUTRAAL    " + locatie);
+                        int locatie = (20 + (aminoLength * z));
                         visualPanel.setColor(Color.black);
                         visualPanel.fillRect(locatie, 20, aminoLength, 75);
                     }
